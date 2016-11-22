@@ -31,7 +31,7 @@ class Board:
             s += ' ' + str(n)
         return s
 
-            
+
     def addMove(self, col, ox):
         '''Adds a move to the board, X or O depending on which character is
         going
@@ -55,12 +55,12 @@ class Board:
     def setBoard(self, moveString):
         """ Takes in a string of columns and places alternating
             checkers in those columns, starting with 'X'.
- 
+
             For example, call board.setBoard('0123456') to see 'X's and
             'O's alternate on the bottom row, or
             board.setBoard('000000') to see them alternate in the left
             column.
- 
+
             moveString must be a string of integers.
         """
         nextChar = 'X'   # start by playing 'X'
@@ -338,14 +338,16 @@ class Player:
         return self.tiebreakMove(scores)
 
 
-        
-                    
+
+
 
 def connect4():
     '''Calls to the game
     '''
-    #playerX = 'human'
+    playerX = 'human'
     #playerO = 'human'
-    playerX = Player('X', 'RANDOM', 4)
+    #playerX = Player('X', 'RANDOM', 4)
     playerO = Player('O', 'RANDOM', 4)
     Board.playGame(Board(7,6),playerX, playerO)
+
+connect4()
